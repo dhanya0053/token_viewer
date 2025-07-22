@@ -106,7 +106,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-8 overflow-y-auto">
       {/* Header with Department Selection */}
       <div className="flex justify-between items-start mb-12">
         <div className="flex-1">
@@ -244,9 +244,9 @@ function App() {
 
       {/* Upcoming Tokens */}
       {upcomingTokens.length > 0 && (
-        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 border border-slate-200 shadow-lg">
+        <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-8 border border-slate-200 shadow-lg max-h-96 overflow-y-auto">
           <h3 className="text-3xl font-semibold text-slate-700 mb-6 text-center">Upcoming Tokens</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pr-2">
             {upcomingTokens.map((token, index) => (
               <div key={token.number} className="bg-white rounded-2xl p-6 border border-slate-150 shadow-sm">
                 <div className="text-center">
